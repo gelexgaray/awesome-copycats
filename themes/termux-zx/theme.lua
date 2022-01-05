@@ -16,7 +16,7 @@ local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
 
 local theme                                     = {}
 theme.default_dir                               = require("awful.util").get_themes_dir() .. "default"
-theme.dir                                       = os.getenv("HOME") .. "/.config/awesome/themes/zx"
+theme.dir                                       = os.getenv("HOME") .. "/.config/awesome/themes/termux-zx"
 theme.wallpaper                                 = theme.dir .. "/wall.png"
 theme.font                                      = "Terminus 10.5"
 theme.fg_normal                                 = "#9E9E9E"
@@ -101,10 +101,14 @@ theme.cal = lain.widget.cal({
         bg   = theme.bg_normal
     }
 })
-
+ 
 -- Launcher
 local mylauncher = awful.widget.button({ image = theme.awesome_icon })
 mylauncher:connect_signal("button::press", function() awful.util.mymainmenu:toggle() end)
+
+-- termux battery info
+local mybattery = awful.widget.watch('bash -c "termux-battery-status | jq .percentage "', 60)
+local percent   = wibox.widget.textbox('% ')
 
 -- Separators
 local first = wibox.widget.textbox(markup.font("Terminus 4", " "))
@@ -172,6 +176,8 @@ function theme.at_screen_connect(s)
             layout = wibox.layout.fixed.horizontal,
             wibox.widget.systray(),
             spr,
+            mybattery,
+            percent,
             --theme.mpd.widget,
             --theme.mail.widget,
             --theme.fs.widget,

@@ -94,7 +94,7 @@ local themes = {
     "rainbow",         -- 8
     "steamburn",       -- 9
     "vertex",          -- 10
-    "zx"               -- 11
+    "termux-zx"        -- 11
 }
 
 local chosen_theme = themes[11]
