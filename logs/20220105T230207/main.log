@@ -1,0 +1,7 @@
+[2022-01-05 23:02:08.338] [main] [info] update#setState idle
+[2022-01-05 23:02:08.519] [main] [info] ExtensionHostStarterWorker created
+[2022-01-05 23:02:14.031] [main] [info] Starting extension host with pid 8600 (fork() took 36 ms).
+[2022-01-05 23:02:38.347] [main] [info] update#setState checking for updates
+[2022-01-05 23:02:38.465] [main] [info] update#setState idle
+[2022-01-05 23:02:50.854] [main] [info] Waiting for extension host with pid 8600 to exit.
+[2022-01-05 23:02:50.911] [main] [info] Extension host with pid 8600 exited with code: 0, signal: null.

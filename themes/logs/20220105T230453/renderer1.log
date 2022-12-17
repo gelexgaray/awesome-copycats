@@ -1,0 +1,10 @@
+[2022-01-05 23:04:57.218] [renderer1] [error] Error: Unable to read file '/root/.config/awesome/themes/zx/theme.lua' (Error: Unable to resolve nonexistent file '/root/.config/awesome/themes/zx/theme.lua')
+    at i.handleSetInputError (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2323:115082)
+    at i.handleSetInputError (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2323:118873)
+    at i.setInput (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2323:114776)
+    at async n.doSetInput (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2323:35224)
+    at async n.doOpenEditor (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2323:33525)
+    at async n.openEditor (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2323:33151)
+    at async vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2525:17056
+[2022-01-05 23:04:58.618] [renderer1] [error] [Extension Host] (node:9416) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+(Use `code --trace-deprecation ...` to show where the warning was created)

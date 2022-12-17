@@ -56,8 +56,8 @@ theme.layout_txt_max                            = "[m]"
 theme.layout_txt_fullscreen                     = "[F]"
 theme.layout_txt_magnifier                      = "[M]"
 theme.layout_txt_floating                       = "[~]"
-theme.titlebar_close_button_normal              = theme.default_dir.."/titlebar/close_normal.png"
-theme.titlebar_close_button_focus               = theme.default_dir.."/titlebar/close_focus.png"
+theme.titlebar_close_button_normal              = theme.dir .. "/icons/titlebar/close_normal.png"
+theme.titlebar_close_button_focus               = theme.dir .. "/icons/titlebar/close_focus.png"
 theme.titlebar_minimize_button_normal           = theme.default_dir.."/titlebar/minimize_normal.png"
 theme.titlebar_minimize_button_focus            = theme.default_dir.."/titlebar/minimize_focus.png"
 theme.titlebar_ontop_button_normal_inactive     = theme.default_dir.."/titlebar/ontop_normal_inactive.png"
@@ -107,8 +107,8 @@ local mylauncher = awful.widget.button({ image = theme.awesome_icon })
 mylauncher:connect_signal("button::press", function() awful.util.mymainmenu:toggle() end)
 
 -- termux battery info
-local mybattery = awful.widget.watch('bash -c "termux-battery-status | jq .percentage "', 60)
-local percent   = wibox.widget.textbox('% ')
+--local mybattery = awful.widget.watch('bash -c "termux-battery-status | jq .percentage "', 60)
+--local percent   = wibox.widget.textbox('% ')
 
 -- Separators
 local first = wibox.widget.textbox(markup.font("Terminus 4", " "))
