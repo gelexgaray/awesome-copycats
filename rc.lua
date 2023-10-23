@@ -106,6 +106,7 @@ local vi_focus     = false -- vi-like client focus https://github.com/lcpz/aweso
 local cycle_prev   = true  -- cycle with only the previously focused client or all https://github.com/lcpz/awesome-copycats/issues/274
 local editor       = os.getenv("EDITOR") or "nano"
 local browser      = "firefox"
+local vscode       = string.format('code --no-sandbox --user-data-dir="%s/.code"', os.getenv("HOME"))
 
 awful.util.terminal = terminal
 awful.util.tagnames = { "1", "2", "3", "4", "5" }
@@ -118,7 +119,7 @@ awful.layout.layouts = {
     --awful.layout.suit.tile.bottom,
     --awful.layout.suit.tile.top,
     --awful.layout.suit.fair,
-    --awful.layout.suit.fair.horizontal,
+    awful.layout.suit.fair.horizontal,
     --awful.layout.suit.spiral.dwindle,
     --awful.layout.suit.max,
     --awful.layout.suit.magnifier,
@@ -182,7 +183,8 @@ beautiful.init(string.format("%s/.config/awesome/themes/%s/theme.lua", os.getenv
 local myawesomemenu = {
    { "Hotkeys", function() hotkeys_popup.show_help(nil, awful.screen.focused()) end },
 --   { "Manual", string.format("%s -e man awesome", terminal) },
-   { "Edit config", string.format("%s -e %s %s", terminal, editor, awesome.conffile) },
+--   { "Edit config", string.format("%s -e %s %s", terminal, editor, awesome.conffile) },
+   { "Edit config", string.format("%s %s", vscode, awesome.conffile) },
    { "Restart", awesome.restart },
    { "Quit", function() awesome.quit() end },
 }
@@ -190,10 +192,11 @@ local myawesomemenu = {
 awful.util.mymainmenu = freedesktop.menu.build {
     before = {
         { "Awesome", myawesomemenu, beautiful.awesome_icon },
+        { "Terminal", terminal },
         -- other triads can be put here
     },
     after = {
-        { "Open terminal", terminal },
+        { "VS Code", vscode },
         -- other triads can be put here
     }
 }
