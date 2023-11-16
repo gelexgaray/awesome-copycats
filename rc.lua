@@ -111,15 +111,15 @@ local vscode       = string.format('code --no-sandbox --user-data-dir="%s/.code"
 awful.util.terminal = terminal
 awful.util.tagnames = { "1", "2", "3", "4", "5" }
 awful.layout.layouts = {
-    --awful.layout.suit.max.fullscreen,
+    awful.layout.suit.fair.horizontal,
     awful.layout.suit.spiral,
+    --awful.layout.suit.max.fullscreen,
     --awful.layout.suit.floating,
     --awful.layout.suit.tile,
     --awful.layout.suit.tile.left,
     --awful.layout.suit.tile.bottom,
     --awful.layout.suit.tile.top,
     --awful.layout.suit.fair,
-    awful.layout.suit.fair.horizontal,
     --awful.layout.suit.spiral.dwindle,
     --awful.layout.suit.max,
     --awful.layout.suit.magnifier,
